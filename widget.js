@@ -229,13 +229,6 @@ df-messenger::part(chat-bubble):hover {
     .recaptcha-text a:hover {
       text-decoration: underline;
     }
-
-    @media (max-width: 480px) {
-          df-messenger {
-      --df-messenger-chat-window-height: 460px;
-      --df-messenger-chat-window-width: 250px;
-    }
-    }
   `;
 
   // Create style element

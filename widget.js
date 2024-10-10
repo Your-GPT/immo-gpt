@@ -93,17 +93,20 @@ df-messenger {
   z-index: 1000;
 }
 
-df-messenger::part(chat-bubble) {
-  width: 56px !important;
-  height: 56px !important;
-  background-color: var(--widget-button-color) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+df-messenger:hover {
+    --df-messenger-chat-bubble-background: var(--widget-button-hover-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
 }
 
-df-messenger::part(chat-bubble):hover {
-  background-color: var(--widget-button-hover-color) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+df-messenger::part(chat-bubble) {
+    border-radius: 50%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+df-messenger:hover::part(chat-bubble) {
+    background-color: #e0e0e0;
+    border-radius: 50%;
 }
 
     df-messenger {

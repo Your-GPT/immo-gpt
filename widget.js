@@ -65,41 +65,42 @@
       z-index: 997;
     }
 
-    df-messenger {
-      --df-messenger-bot-message: var(--widget-button-color);
-      --df-messenger-button-titlebar-color: var(--widget-button-color);
-      --df-messenger-chat-background-color: #fafafa;
-      --df-messenger-font-color: #000000;
-      --df-messenger-send-icon: var(--widget-button-color);
-      --df-messenger-user-message: #5a0f0f;
-      --df-messenger-fab-color: var(--widget-button-color);
-      --df-messenger-fab-icon-color: var(--widget-icon-color);
-      --df-messenger-chat-bubble-size: 48px;
-      --df-messenger-chat-bubble-background: var(--widget-button-color);
-      --df-messenger-chat-bubble-icon-color: var(--widget-icon-color);
-      --df-messenger-chat-bubble-border-radius: 50%;
-      z-index: 1000;
-      transition: all 0.3s ease;
-    }
+df-messenger {
+  --df-messenger-bot-message: var(--widget-button-color);
+  --df-messenger-button-titlebar-color: var(--widget-button-color);
+  --df-messenger-chat-background-color: #fafafa;
+  --df-messenger-font-color: #000000;
+  --df-messenger-send-icon: var(--widget-button-color);
+  --df-messenger-user-message: #5a0f0f;
+  --df-messenger-fab-color: var(--widget-button-color);
+  --df-messenger-fab-icon-color: var(--widget-icon-color);
+  --df-messenger-chat-bubble-size: 48px;
+  --df-messenger-chat-bubble-background: var(--widget-button-color);
+  --df-messenger-chat-bubble-icon-color: var(--widget-icon-color);
+  --df-messenger-chat-bubble-border-radius: 50%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
 
-    df-messenger {
-      position: fixed;
-      bottom: 16px;
-      right: 16px;
-      z-index: 1000;
-    }
+df-messenger {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+}
 
-    df-messenger::part(chat-bubble) {
-      width: 56px !important;
-      height: 56px !important;
-      background-color: var(--widget-button-color) !important;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-    }
+df-messenger::part(chat-bubble) {
+  width: 56px !important;
+  height: 56px !important;
+  background-color: var(--widget-button-color) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-    df-messenger::part(chat-bubble):hover {
-      background-color: var(--widget-button-hover-color) !important;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
-    }
+df-messenger::part(chat-bubble):hover {
+  background-color: var(--widget-button-hover-color) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
 
     df-messenger {
       --df-messenger-primary-color: var(--widget-button-color);

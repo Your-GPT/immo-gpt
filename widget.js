@@ -21,6 +21,10 @@
       transition: transform 0.5s ease, opacity 0.5s ease;
     }
 
+    .chat-wrapper {
+    border-radius: 50%;
+    }
+
     .widget-button {
       background-color: var(--widget-button-color);
       color: var(--widget-icon-color);
@@ -232,7 +236,7 @@ df-messenger::part(chat-bubble):hover {
 
     @media (max-width: 480px) {
       df-messenger {
-        --df-messenger-chat-window-height: 80vh;
+        --df-messenger-chat-window-height: 75vh;
         --df-messenger-chat-window-width: calc(100vw - 40px);
       }
   `;

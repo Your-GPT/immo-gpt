@@ -158,12 +158,8 @@
       color: #666;
       text-align: center;
       padding: 10px;
-      background-color: rgba(255, 255, 255, 0.8);
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
+      background-color: #f5f5f5;
+      border-top: 1px solid #e0e0e0;
     }
 
     .recaptcha-text a {
@@ -280,7 +276,18 @@
     <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
     <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
   `;
-  document.body.appendChild(recaptchaText);
+
+  // Function to append recaptchaText to the end of the body
+  function appendRecaptchaText() {
+    document.body.appendChild(recaptchaText);
+  }
+
+  // Call the function when the DOM is fully loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', appendRecaptchaText);
+  } else {
+    appendRecaptchaText();
+  }
 
   // Script logic
   let lastScrollTop = 0;
@@ -372,7 +379,7 @@
       event.preventDefault();
       event.stopPropagation();
       const searchWidget = document.querySelector('gen-search-widget');
-      if (searchWidget) {
+      if  (searchWidget) {
         searchWidget.setAttribute('open', 'true');
       }
     }
@@ -383,7 +390,7 @@
 
     chatPopupContainer.addEventListener('click', function(event) {
       const popup = event.target.closest('.chat-popup');
-      if  (popup) {
+      if (popup) {
         if (event.target.closest('.social-icons a')) {
           return;
         }

@@ -232,7 +232,7 @@ df-messenger::part(chat-bubble):hover {
 
     @media (max-width: 480px) {
       df-messenger {
-        --df-messenger-chat-window-height: 85vh;
+        --df-messenger-chat-window-height: 80vh;
         --df-messenger-chat-window-width: calc(100vw - 40px);
       }
   `;

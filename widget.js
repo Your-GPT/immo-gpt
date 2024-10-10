@@ -229,6 +229,26 @@ df-messenger::part(chat-bubble):hover {
     .recaptcha-text a:hover {
       text-decoration: underline;
     }
+
+        @media (max-width: 480px) {
+      df-messenger {
+      --df-messenger-primary-color: var(--widget-button-color);
+      --df-messenger-titlebar-background: #ffffff;
+      --df-messenger-font-color: #333333;
+      --df-messenger-message-bot-background: #f2f2f2;
+      --df-messenger-message-user-background: var(--widget-button-color);
+      --df-messenger-message-user-font-color: var(--widget-icon-color);
+      --df-messenger-chat-background: #ffffff;
+      --df-messenger-input-background: #ffffff;
+      --df-messenger-send-icon-color: var(--widget-button-color);
+      --df-messenger-chat-scroll-button-background: var(--widget-button-color);
+      --df-messenger-chat-scroll-button-font-color: var(--widget-icon-color);
+      --df-messenger-input-box-focus-border: 2px solid var(--widget-button-color);
+      --df-messenger-chat-window-height: 450px;
+      --df-messenger-chat-window-width: 250px;
+      --df-messenger-chat-border-radius: 2px;
+    }
+      }
   `;
 
   // Create style element

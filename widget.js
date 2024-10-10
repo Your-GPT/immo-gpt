@@ -5,9 +5,9 @@
     @import url('https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css');
 
     :root {
-      --widget-button-color: #0070f3;
+      --widget-button-color: #800001;
       --widget-icon-color: #f2f2f2;
-      --widget-button-hover-color: #3593ff;
+      --widget-button-hover-color: #a00c0c;
     }
 
     .widget-buttons {

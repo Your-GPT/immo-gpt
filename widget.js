@@ -230,11 +230,10 @@ df-messenger::part(chat-bubble):hover {
       text-decoration: underline;
     }
 
-        @media (max-width: 480px) {
+    @media (max-width: 480px) {
       df-messenger {
-      --df-messenger-chat-window-height: 100vh;
-      --df-messenger-chat-window-width: 100vw;
-    }
+        --df-messenger-chat-window-height: calc(100vh - 20px) !important;
+        --df-messenger-chat-window-width: calc(100vw - 20px) !important;
       }
   `;
 

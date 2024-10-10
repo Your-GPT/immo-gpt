@@ -229,6 +229,31 @@ df-messenger::part(chat-bubble):hover {
     .recaptcha-text a:hover {
       text-decoration: underline;
     }
+
+     /* Medienabfragen für kleinere Bildschirme */
+    @media (max-width: 768px) {
+      df-messenger {
+        --df-messenger-chat-window-height: 100% !important;
+        --df-messenger-chat-window-width: 100% !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      df-messenger::part(chat-bubble) {
+        width: 48px !important;
+        height: 48px !important;
+      }
+
+      .widget-buttons {
+        right: 68px;
+      }
+
+      .widget-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+    }
   `;
 
   // Create style element

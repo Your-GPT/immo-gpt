@@ -262,10 +262,10 @@ df-messenger:hover::part(chat-bubble) {
     <button class="widget-button" id="searchWidgetTrigger">
       <i class="fas fa-search"></i>
     </button>
-    <button class="widget-button" onclick="window.location.href='tel:+491234567890';">
+    <button class="widget-button" onclick="window.location.href='tel:0800 955 66 77';">
       <i class="fas fa-phone"></i>
     </button>
-    <button class="widget-button" onclick="window.location.href='mailto:info@goost-immobilien.de';">
+    <button class="widget-button" onclick="window.location.href='mailto:kontakt@deinestadt-immo.de';">
       <i class="fas fa-envelope"></i>
     </button>
   `;

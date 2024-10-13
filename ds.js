@@ -277,8 +277,8 @@ df-messenger:hover::part(chat-bubble) {
 
   const dfMessenger = document.createElement('df-messenger');
   dfMessenger.setAttribute('intent', 'WELCOME');
-  dfMessenger.setAttribute('chat-title', 'GoostGPT');
-  dfMessenger.setAttribute('agent-id', '0a296a3b-f2ab-49f9-b07d-aae7f98e6618');
+  dfMessenger.setAttribute('chat-title', 'DeineStadtGPT');
+  dfMessenger.setAttribute('agent-id', '8e73ae1d-7a89-47a4-a67c-610e59b4b4e3');
   dfMessenger.setAttribute('language-code', 'de');
   document.body.appendChild(dfMessenger);
 

@@ -201,23 +201,6 @@ df-messenger:hover::part(chat-bubble) {
       transform: translateY(10px);
     }
 
-    .social-icons {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 5px;
-    }
-
-    .social-icons a {
-      color: var(--widget-button-color);
-      font-size: 18px;
-      transition: color 0.3s ease, filter 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: var(--widget-button-hover-color);
-      filter: brightness(1.5);
-    }
-
     .grecaptcha-badge {
       visibility: hidden;
     }
@@ -308,16 +291,7 @@ df-messenger:hover::part(chat-bubble) {
     popup.className = 'chat-popup';
     popup.innerHTML = message;
 
-    if (socialIcons) {
-      popup.innerHTML += `
-        <div class="social-icons">
-          <a href="https://www.instagram.com/goost_immobilien/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/Goost.Immobilien/" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.youtube.com/channel/UCnLEXs3sZmUv6zQYIPko6UQ" target="_blank"><i class="fab fa-youtube"></i></a>
-          <a href="https://www.linkedin.com/company/goost-immobilien/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-      `;
-    }
+    
 
     chatPopupContainer.insertBefore(popup, chatPopupContainer.firstChild);
 
@@ -421,9 +395,7 @@ df-messenger:hover::part(chat-bubble) {
       showChatPopup('🔎 Haben Sie gefunden was Sie suchen?', 5000);
     }
 
-    if (scrollPercentage > 90 && !shownPopups.has('Besuchen Sie uns gerne auf Social Media!')) {
-      showChatPopup('Besuchen Sie uns gerne auf Social Media!', 7000, true);
-    }
+    
 
     checkForFourthBubble();
   });

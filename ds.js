@@ -242,9 +242,7 @@ df-messenger:hover::part(chat-bubble) {
   const widgetButtons = document.createElement('div');
   widgetButtons.className = 'widget-buttons';
   widgetButtons.innerHTML = `
-    <button class="widget-button" id="searchWidgetTrigger">
-      <i class="fas fa-search"></i>
-    </button>
+    
     <button class="widget-button" onclick="window.location.href='tel:0800 955 66 77';">
       <i class="fas fa-phone"></i>
     </button>
@@ -330,19 +328,7 @@ df-messenger:hover::part(chat-bubble) {
     }
   }
 
-  function initializeSearchButton() {
-    const searchButton = document.getElementById('searchWidgetTrigger');
-    if (searchButton) {
-      searchButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        const searchWidget = document.querySelector('gen-search-widget');
-        if (searchWidget) {
-          searchWidget.setAttribute('open', '');
-        }
-      });
-    }
-  }
+
 
   function initializeChatPopupListeners() {
     chatPopupContainer.addEventListener('click', function(event) {
@@ -361,21 +347,11 @@ df-messenger:hover::part(chat-bubble) {
 
   // Wait for DOM to be fully loaded
   document.addEventListener('DOMContentLoaded', function() {
-    initializeSearchButton();
     initializeChatPopupListeners();
     showChatPopup('👋 Willkommen! Wie kann ich Ihnen helfen?', 5000);
   });
 
-  // Wait for the window to fully load
-  window.addEventListener('load', function() {
-    initializeSearchButton();
-    
-    // Create and append the search widget
-    const searchWidget = document.createElement('gen-search-widget');
-    searchWidget.setAttribute('configId',   '7059425d-0df0-429c-846a-86f698dc4fde');
-    searchWidget.setAttribute('triggerId', 'searchWidgetTrigger');
-    document.body.appendChild(searchWidget);
-  });
+
 
   window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;

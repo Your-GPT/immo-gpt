@@ -201,25 +201,6 @@ df-messenger:hover::part(chat-bubble) {
       transform: translateY(10px);
     }
 
-    .grecaptcha-badge {
-      visibility: hidden;
-    }
-
-    .recaptcha-text {
-      font-size: 12px;
-      color: #666;
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .recaptcha-text a {
-      color: var(--widget-button-color);
-      text-decoration: none;
-    }
-
-    .recaptcha-text a:hover {
-      text-decoration: underline;
-    }
 
     @media (max-width: 480px) {
       df-messenger {
@@ -263,14 +244,7 @@ df-messenger:hover::part(chat-bubble) {
   dfMessenger.setAttribute('language-code', 'de');
   document.body.appendChild(dfMessenger);
 
-  const recaptchaText = document.createElement('div');
-  recaptchaText.className = 'recaptcha-text';
-  recaptchaText.innerHTML = `
-    This site is protected by reCAPTCHA and the Google
-    <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
-    <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
-  `;
-  document.body.appendChild(recaptchaText);
+
 
   // Script logic
   let lastScrollTop = 0;

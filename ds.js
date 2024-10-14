@@ -367,9 +367,7 @@ df-messenger:hover::part(chat-bubble) {
     }
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 
-    if (maxScrollReached > 1300 && !shownPopups.has('🔎 Haben Sie gefunden was Sie suchen?')) {
-      showChatPopup('🔎 Haben Sie gefunden was Sie suchen?', 5000);
-    }
+
 
     
 

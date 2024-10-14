@@ -323,8 +323,8 @@ df-messenger:hover::part(chat-bubble) {
   }
 
   function checkForFourthBubble() {
-    if (firstTwoBubblesShown && Date.now() - pageLoadTime > 30000 && !shownPopups.has('Kann ich Ihnen zu einer speziellen Frage behilflich sein?')) {
-      showChatPopup('Kann ich Ihnen zu einer speziellen Frage behilflich sein?', 5000);
+    if (firstTwoBubblesShown && Date.now() - pageLoadTime > 30000 && !shownPopups.has('🔎 Haben Sie gefunden was Sie suchen?')) {
+      showChatPopup('🔎 Haben Sie gefunden was Sie suchen?', 5000);
     }
   }
 

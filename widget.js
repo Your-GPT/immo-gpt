@@ -244,13 +244,13 @@ df-messenger:hover::part(chat-bubble) {
   widgetButtons.className = 'widget-buttons';
   widgetButtons.innerHTML = `
     <button class="widget-button" id="searchWidgetTrigger">
-      <i class="fas fa-search"></i>
+      <div class="fas fa-search"></div>
     </button>
     <button class="widget-button" onclick="window.location.href='tel:+491234567890';">
-      <i class="fas fa-phone"></i>
+      <div class="fas fa-phone"></div>
     </button>
     <button class="widget-button" onclick="window.location.href='mailto:info@goost-immobilien.de';">
-      <i class="fas fa-envelope"></i>
+      <div class="fas fa-envelope"></div>
     </button>
   `;
   document.body.appendChild(widgetButtons);

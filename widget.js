@@ -284,7 +284,7 @@ df-messenger:hover::part(chat-bubble) {
   let pageLoadTime = Date.now();
   let firstTwoBubblesShown = false;
 
-  function showChatPopup(message, duration, socialIcons = false) {
+  function showChatPopup(message, duration) {
     if (shownPopups.has(message)) return;
     shownPopups.add(message);
 
@@ -347,9 +347,7 @@ df-messenger:hover::part(chat-bubble) {
     chatPopupContainer.addEventListener('click', function(event) {
       const popup = event.target.closest('.chat-popup');
       if (popup) {
-        if (event.target.closest('.social-icons a')) {
-          return;
-        }
+        
         const dfMessenger = document.querySelector('df-messenger');
         if (dfMessenger) {
           dfMessenger.setAttribute('expand', 'true');

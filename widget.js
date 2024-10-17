@@ -394,10 +394,6 @@ df-messenger:hover::part(chat-bubble) {
       showChatPopup('🔎 Haben Sie gefunden was Sie suchen?', 5000);
     }
 
-    if (scrollPercentage > 90 && !shownPopups.has('Besuchen Sie uns gerne auf Social Media!')) {
-      showChatPopup('Besuchen Sie uns gerne auf Social Media!', 7000, true);
-    }
-
     checkForFourthBubble();
   });
 

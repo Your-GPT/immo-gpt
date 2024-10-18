@@ -218,7 +218,7 @@ df-messenger:hover::part(chat-bubble) {
       filter: brightness(1.5);
     }
 
-    .recaptcha-badge {
+    .grecaptcha-badge {
       visibility: hidden;
     }
 

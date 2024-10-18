@@ -246,6 +246,10 @@ document.addEventListener('DOMContentLoaded', function() {
     .recaptcha-text a:hover {
       text-decoration: underline;
     }
+    
+    .flip-vertical {
+      transform: scaleX(-1);
+    }
 
     @media (max-width: 480px) {
       df-messenger {
@@ -270,20 +274,20 @@ document.addEventListener('DOMContentLoaded', function() {
   widgetButtons.className = 'cb-widget-buttons';
   widgetButtons.innerHTML = `
     <button class="cb-widget-button" id="searchWidgetTrigger">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/>
-            </svg>
-        </button>
-        <button class="cb-widget-button" onclick="window.location.href='tel:+491234567890';">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/>
-            </svg>
-        </button>
-        <button class="cb-widget-button" onclick="window.location.href='mailto:info@goost-immobilien.de';">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
-            </svg>
-        </button>
+      <svg  pointer-events="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/>
+      </svg>
+    </button>
+    <button class="cb-widget-button" onclick="window.location.href='tel:+491234567890';">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="flip-vertical">
+        <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/>
+      </svg>
+    </button>
+    <button class="cb-widget-button" onclick="window.location.href='mailto:info@goost-immobilien.de';">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
+      </svg>
+    </button>
   `;
   document.body.appendChild(widgetButtons);
 
@@ -299,6 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.body.appendChild(dfMessenger);
 
   const recaptchaText = document.createElement('div');
+  
   recaptchaText.className = 'recaptcha-text';
   recaptchaText.innerHTML = `
     This site is protected by reCAPTCHA and the Google
@@ -306,6 +311,37 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
   `;
   document.body.appendChild(recaptchaText);
+
+  let searchWidget = null;
+
+  // Load Gen App Builder script
+  const script = document.createElement('script');
+  script.src = 'https://cloud.google.com/ai/gen-app-builder/client?hl=de_DE';
+  script.async = true;
+  document.body.appendChild(script);
+
+  // Create and append the search widget
+  script.onload = function() {
+    searchWidget = document.createElement('gen-search-widget');
+    searchWidget.setAttribute('configId', '7059425d-0df0-429c-846a-86f698dc4fde');
+    searchWidget.setAttribute('triggerId', 'searchWidgetTrigger');
+    document.body.appendChild(searchWidget);
+    console.log('Search widget created and appended');
+  };
+
+  // Handle search click
+  function handleSearchClick() {
+    if (searchWidget) {
+      searchWidget.setAttribute('open', '');
+      console.log('Search widget opened');
+    } else {
+      console.log('Search widget not loaded yet');
+    }
+  }
+
+  // Add click event listener to the button
+  const searchButton = document.getElementById('searchWidgetTrigger');
+  searchButton.addEventListener('click', handleSearchClick);
 
   // Script logic
   let lastScrollTop = 0;
@@ -329,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="social-icons">
           <a href="https://www.instagram.com/goost_immobilien/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path d="M224.1  141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+              <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
             </svg>
           </a>
           <a href="https://www.facebook.com/Goost.Immobilien/" target="_blank">
@@ -388,20 +424,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  function initializeSearchButton() {
-    const searchButton = document.getElementById('searchWidgetTrigger');
-    if (searchButton) {
-      searchButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        const searchWidget = document.querySelector('gen-search-widget');
-        if (searchWidget) {
-          searchWidget.setAttribute('open', '');
-        }
-      });
-    }
-  }
-
   function initializeChatPopupListeners() {
     chatPopupContainer.addEventListener('click', function(event) {
       const popup = event.target.closest('.cb-chat-popup');
@@ -418,7 +440,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Initialize components
-  initializeSearchButton();
   initializeChatPopupListeners();
 
   // Show the first chat popup after a short delay
@@ -504,16 +525,13 @@ document.addEventListener('DOMContentLoaded', function() {
   dfMessengerScript.src = 'https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js';
   document.body.appendChild(dfMessengerScript);
 
-  // Load Gen App Builder script
-  const genAppBuilderScript = document.createElement('script');
-  genAppBuilderScript.src = 'https://cloud.google.com/ai/gen-app-builder/client?hl=en_US';
-  document.body.appendChild(genAppBuilderScript);
-});
-
-// Create and append the search widget
-window.addEventListener('load', function() {
-  const searchWidget = document.createElement('gen-search-widget');
-  searchWidget.setAttribute('configId', '7059425d-0df0-429c-846a-86f698dc4fde');
-  searchWidget.setAttribute('triggerId', 'searchWidgetTrigger');
-  document.body.appendChild(searchWidget);
+  // Clean up function
+  window.addEventListener('unload', function() {
+    if (script.parentNode) {
+      script.parentNode.removeChild(script);
+    }
+    if (searchWidget && searchWidget.parentNode) {
+      searchWidget.parentNode.removeChild(searchWidget);
+    }
+  });
 });

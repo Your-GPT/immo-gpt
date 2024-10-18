@@ -10,17 +10,17 @@
     }
 
     .cb-widget-buttons {
-            position: fixed;
-            bottom: 20px;
-            right: 78px;
-            display: flex;
-            flex-direction: row-reverse;
-            gap: 10px;
-            z-index: 998;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
+    position: fixed;
+    bottom: 20px;
+    right: 78px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    z-index: 998;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
 
-         .cb-widget-button {
+  .cb-widget-button {
     background-color: var(--widget-button-color);
     color: var(--widget-icon-color);
     border: none;
@@ -35,13 +35,14 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.5s ease, opacity 0.5s ease;
     position: relative;
+    overflow: hidden;
   }
 
   .cb-widget-button svg {
-    pointer-events: none;
     width: 24px;
     height: 24px;
     fill: currentColor;
+    display: block;
   }
 
         .cb-widget-button:hover {

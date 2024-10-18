@@ -1,7 +1,6 @@
 (function() {
   // Styles
   const styles = `
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
     @import url('https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css');
 
     :root {
@@ -461,10 +460,6 @@ df-messenger:hover::part(chat-bubble) {
   }
 
   // Load external resources
-  const fontAwesomeLink = document.createElement('link');
-  fontAwesomeLink.rel = 'stylesheet';
-  fontAwesomeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
-  document.head.appendChild(fontAwesomeLink);
 
   const dfMessengerStyleLink = document.createElement('link');
   dfMessengerStyleLink.rel = 'stylesheet';

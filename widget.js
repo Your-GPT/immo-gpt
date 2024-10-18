@@ -310,7 +310,7 @@ df-messenger:hover::part(chat-bubble) {
 
     if (socialIcons) {
       popup.innerHTML += `
-        <div class="social-icons">
+        <div class="cb-social-icons">
           <a href="https://www.instagram.com/goost_immobilien/" target="_blank"><div class="fab fa-instagram"></div></a>
           <a href="https://www.facebook.com/Goost.Immobilien/" target="_blank"><div class="fab fa-facebook"></div></a>
           <a href="https://www.youtube.com/channel/UCnLEXs3sZmUv6zQYIPko6UQ" target="_blank"><div class="fab fa-youtube"></div></a>
@@ -374,7 +374,7 @@ df-messenger:hover::part(chat-bubble) {
     chatPopupContainer.addEventListener('click', function(event) {
       const popup = event.target.closest('.cb-chat-popup');
       if (popup) {
-        if (event.target.closest('.social-icons a')) {
+        if (event.target.closest('.cb-social-icons a')) {
           return;
         }
         const dfMessenger = document.querySelector('df-messenger');

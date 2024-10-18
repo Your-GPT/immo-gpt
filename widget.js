@@ -5,9 +5,9 @@
     @import url('https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css');
 
     :root {
-      --cb-widget-button-color: #800101;
-      --cb-widget-icon-color: #f2f2f2;
-      --cb-widget-button-hover-color: #a00c0c;
+      --widget-button-color: #800101;
+      --widget-icon-color: #f2f2f2;
+      --widget-button-hover-color: #a00c0c;
     }
 
     .cb-widget-buttons {
@@ -218,7 +218,7 @@ df-messenger:hover::part(chat-bubble) {
       filter: brightness(1.5);
     }
 
-    .cb-grecaptcha-badge {
+    .cb-recaptcha-badge {
       visibility: hidden;
     }
 

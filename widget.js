@@ -321,7 +321,7 @@ df-messenger:hover::part(chat-bubble) {
 
     chatPopupContainer.insertBefore(popup, chatPopupContainer.firstChild);
 
-    const existingPopups = chatPopupContainer.querySelectorAll('.chat-popup');
+    const existingPopups = chatPopupContainer.querySelectorAll('.cb-chat-popup');
     existingPopups.forEach((existingPopup, index) => {
       if (index > 0) {
         existingPopup.style.transform = `translateY(-${index * 100}%)`;
@@ -337,7 +337,7 @@ df-messenger:hover::part(chat-bubble) {
       popup.classList.add('hide');
       setTimeout(() => {
         chatPopupContainer.removeChild(popup);
-        const remainingPopups = chatPopupContainer.querySelectorAll('.chat-popup');
+        const remainingPopups = chatPopupContainer.querySelectorAll('.cb-chat-popup');
         remainingPopups.forEach((remainingPopup, index) => {
           remainingPopup.style.transform = `translateY(-${index * 100}%)`;
         });
@@ -372,7 +372,7 @@ df-messenger:hover::part(chat-bubble) {
 
   function initializeChatPopupListeners() {
     chatPopupContainer.addEventListener('click', function(event) {
-      const popup = event.target.closest('.chat-popup');
+      const popup = event.target.closest('.cb-chat-popup');
       if (popup) {
         if (event.target.closest('.social-icons a')) {
           return;

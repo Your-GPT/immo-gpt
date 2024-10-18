@@ -20,29 +20,29 @@
             transition: transform 0.5s ease, opacity 0.5s ease;
         }
 
-        .cb-widget-button {
-            background-color: var(--widget-button-color);
-            color: var(--widget-icon-color);
-            border: none;
-            border-radius: 50%;
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.5s ease, opacity 0.5s ease;
-            position: relative;
-        }
+         .cb-widget-button {
+    background-color: var(--widget-button-color);
+    color: var(--widget-icon-color);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.5s ease, opacity 0.5s ease;
+    position: relative;
+  }
 
-        .cb-widget-button svg {
-            pointer-events: none;
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
+  .cb-widget-button svg {
+    pointer-events: none;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
 
         .cb-widget-button:hover {
             background-color: var(--widget-button-hover-color);
@@ -248,6 +248,20 @@ df-messenger:hover::part(chat-bubble) {
         --df-messenger-chat-window-height: 75vh;
         --df-messenger-chat-window-width: calc(100vw - 40px);
       }
+
+      .cb-widget-buttons {
+      right: 68px;
+    }
+
+    .cb-widget-button {
+      width: 40px;
+      height: 40px;
+    }
+
+    .cb-widget-button svg {
+      width: 20px;
+      height: 20px;
+    }
   `;
 
   // Create style element

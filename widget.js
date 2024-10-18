@@ -252,16 +252,6 @@ df-messenger:hover::part(chat-bubble) {
       .cb-widget-buttons {
       right: 68px;
     }
-
-    .cb-widget-button {
-      width: 40px;
-      height: 40px;
-    }
-
-    .cb-widget-button svg {
-      width: 20px;
-      height: 20px;
-    }
   `;
 
   // Create style element

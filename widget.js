@@ -124,6 +124,7 @@ df-messenger:hover::part(chat-bubble) {
       --df-messenger-chat-window-width: 400px;
       --df-messenger-chat-border-radius: 2px;
       --df-messenger-card-background: #f2f2f2;
+      z-index: 1000;
     }
 
     df-messenger::part(input-wrapper:focus-within) {

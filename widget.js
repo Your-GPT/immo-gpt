@@ -1,4 +1,4 @@
-export default function Component() {
+(function() {
   // Styles
   const styles = `
     @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
@@ -26,8 +26,8 @@ export default function Component() {
     }
 
     .cb-widget-button {
-      background-color: var(--cb-widget-button-color);
-      color: var(--cb-widget-icon-color);
+      background-color: var(--widget-button-color);
+      color: var(--widget-icon-color);
       border: none;
       border-radius: 50%;
       width: 48px;
@@ -42,12 +42,12 @@ export default function Component() {
       position: relative;
     }
 
-    .cb-widget-button div {
+    .cb-widget-button i {
       pointer-events: none;
     }
 
     .cb-widget-button:hover {
-      background-color: var(--cb-widget-button-hover-color);
+      background-color: var(--widget-button-hover-color);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
 
@@ -56,7 +56,7 @@ export default function Component() {
       opacity: 0;
     }
 
-    .cb-widget-buttons.collapsed .cb-widget-button {
+    .cb-widget-buttons.collapsed .widget-button {
       transform: scale(0);
     }
 
@@ -69,67 +69,67 @@ export default function Component() {
       z-index: 997;
     }
 
-    cb-df-messenger {
-      --df-messenger-bot-message: var(--cb-widget-button-color);
-      --df-messenger-button-titlebar-color: var(--cb-widget-button-color);
-      --df-messenger-chat-background-color: #fafafa;
-      --df-messenger-font-color: #000000;
-      --df-messenger-send-icon: var(--cb-widget-button-color);
-      --df-messenger-user-message: #5a0f0f;
-      --df-messenger-fab-color: var(--cb-widget-button-color);
-      --df-messenger-fab-icon-color: var(--cb-widget-icon-color);
-      --df-messenger-chat-bubble-size: 48px;
-      --df-messenger-chat-bubble-background: var(--cb-widget-button-color);
-      --df-messenger-chat-bubble-icon-color: var(--cb-widget-icon-color);
-      --df-messenger-chat-bubble-border-radius: 50%;
-      z-index: 1000;
-      transition: all 0.3s ease;
-    }
+df-messenger {
+  --df-messenger-bot-message: var(--widget-button-color);
+  --df-messenger-button-titlebar-color: var(--widget-button-color);
+  --df-messenger-chat-background-color: #fafafa;
+  --df-messenger-font-color: #000000;
+  --df-messenger-send-icon: var(--widget-button-color);
+  --df-messenger-user-message: #5a0f0f;
+  --df-messenger-fab-color: var(--widget-button-color);
+  --df-messenger-fab-icon-color: var(--widget-icon-color);
+  --df-messenger-chat-bubble-size: 48px;
+  --df-messenger-chat-bubble-background: var(--widget-button-color);
+  --df-messenger-chat-bubble-icon-color: var(--widget-icon-color);
+  --df-messenger-chat-bubble-border-radius: 50%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
 
-    cb-df-messenger {
-      position: fixed;
-      bottom: 16px;
-      right: 16px;
-      z-index: 1000;
-    }
+df-messenger {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+}
 
-    cb-df-messenger:hover {
-        --df-messenger-chat-bubble-background: var(--cb-widget-button-hover-color);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        border-radius: 50%;
-    }
+df-messenger:hover {
+    --df-messenger-chat-bubble-background: var(--widget-button-hover-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+}
 
-    cb-df-messenger::part(chat-bubble) {
-        border-radius: 50%;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
+df-messenger::part(chat-bubble) {
+    border-radius: 50%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-    cb-df-messenger:hover::part(chat-bubble) {
-        background-color: #e0e0e0;
-        border-radius: 50%;
-    }
+df-messenger:hover::part(chat-bubble) {
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
 
-    cb-df-messenger {
-      --df-messenger-primary-color: var(--cb-widget-button-color);
+    df-messenger {
+      --df-messenger-primary-color: var(--widget-button-color);
       --df-messenger-titlebar-background: #ffffff;
       --df-messenger-font-color: #333333;
       --df-messenger-message-bot-background: #f2f2f2;
-      --df-messenger-message-user-background: var(--cb-widget-button-color);
-      --df-messenger-message-user-font-color: var(--cb-widget-icon-color);
+      --df-messenger-message-user-background: var(--widget-button-color);
+      --df-messenger-message-user-font-color: var(--widget-icon-color);
       --df-messenger-chat-background: #ffffff;
       --df-messenger-input-background: #ffffff;
-      --df-messenger-send-icon-color: var(--cb-widget-button-color);
-      --df-messenger-chat-scroll-button-background: var(--cb-widget-button-color);
-      --df-messenger-chat-scroll-button-font-color: var(--cb-widget-icon-color);
-      --df-messenger-input-box-focus-border: 2px solid var(--cb-widget-button-color);
+      --df-messenger-send-icon-color: var(--widget-button-color);
+      --df-messenger-chat-scroll-button-background: var(--widget-button-color);
+      --df-messenger-chat-scroll-button-font-color: var(--widget-icon-color);
+      --df-messenger-input-box-focus-border: 2px solid var(--widget-button-color);
       --df-messenger-chat-window-height: 650px;
       --df-messenger-chat-window-width: 400px;
       --df-messenger-chat-border-radius: 2px;
       --df-messenger-card-background: #f2f2f2;
     }
 
-    cb-df-messenger::part(input-wrapper:focus-within) {
-      border-color: var(--cb-widget-button-color) !important;
+    df-messenger::part(input-wrapper:focus-within) {
+      border-color: var(--widget-button-color) !important;
     }
 
     .cb-chat-popup-container {
@@ -208,13 +208,13 @@ export default function Component() {
     }
 
     .cb-social-icons a {
-      color: var(--cb-widget-button-color);
+      color: var(--widget-button-color);
       font-size: 18px;
       transition: color 0.3s ease, filter 0.3s ease;
     }
 
     .cb-social-icons a:hover {
-      color: var(--cb-widget-button-hover-color);
+      color: var(--widget-button-hover-color);
       filter: brightness(1.5);
     }
 
@@ -230,7 +230,7 @@ export default function Component() {
     }
 
     .cb-recaptcha-text a {
-      color: var(--cb-widget-button-color);
+      color: var(--widget-button-color);
       text-decoration: none;
     }
 
@@ -239,11 +239,10 @@ export default function Component() {
     }
 
     @media (max-width: 480px) {
-      cb-df-messenger {
+      df-messenger {
         --df-messenger-chat-window-height: 75vh;
         --df-messenger-chat-window-width: calc(100vw - 40px);
       }
-    }
   `;
 
   // Create style element
@@ -253,20 +252,20 @@ export default function Component() {
 
   // Create and append elements
   const chatPopupContainer = document.createElement('div');
-  chatPopupContainer.id = 'cbChatPopupContainer';
+  chatPopupContainer.id = 'cbchatPopupContainer';
   chatPopupContainer.className = 'cb-chat-popup-container';
   document.body.appendChild(chatPopupContainer);
 
   const widgetButtons = document.createElement('div');
   widgetButtons.className = 'cb-widget-buttons';
   widgetButtons.innerHTML = `
-    <button class="cb-widget-button" id="cbSearchWidgetTrigger">
+    <button class="cb-widget-button" id="cbsearchWidgetTrigger">
       <div class="fas fa-search"></div>
     </button>
-    <button class="cb-widget-button" id="cbPhoneButton">
+    <button class="cb-widget-button" onclick="window.location.href='tel:+491234567890';">
       <div class="fas fa-phone"></div>
     </button>
-    <button class="cb-widget-button" id="cbEmailButton">
+    <button class="cb-widget-button" onclick="window.location.href='mailto:info@goost-immobilien.de';">
       <div class="fas fa-envelope"></div>
     </button>
   `;
@@ -276,10 +275,10 @@ export default function Component() {
   buttonStackArea.className = 'cb-button-stack-area';
   document.body.appendChild(buttonStackArea);
 
-  const dfMessenger = document.createElement('cb-df-messenger');
+  const dfMessenger = document.createElement('df-messenger');
   dfMessenger.setAttribute('intent', 'WELCOME');
-  dfMessenger.setAttribute('chat-title', 'ChatBot');
-  dfMessenger.setAttribute('agent-id', '');
+  dfMessenger.setAttribute('chat-title', 'GoostGPT');
+  dfMessenger.setAttribute('agent-id', '0a296a3b-f2ab-49f9-b07d-aae7f98e6618');
   dfMessenger.setAttribute('language-code', 'de');
   document.body.appendChild(dfMessenger);
 
@@ -311,18 +310,18 @@ export default function Component() {
 
     if (socialIcons) {
       popup.innerHTML += `
-        <div class="cb-social-icons">
-          <a href="#" target="_blank"><div class="fab fa-instagram"></div></a>
-          <a href="#" target="_blank"><div class="fab fa-facebook"></div></a>
-          <a href="#" target="_blank"><div class="fab fa-youtube"></div></a>
-          <a href="#" target="_blank"><div class="fab fa-linkedin"></div></a>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/goost_immobilien/" target="_blank"><div class="fab fa-instagram"></div></a>
+          <a href="https://www.facebook.com/Goost.Immobilien/" target="_blank"><div class="fab fa-facebook"></div></a>
+          <a href="https://www.youtube.com/channel/UCnLEXs3sZmUv6zQYIPko6UQ" target="_blank"><div class="fab fa-youtube"></div></a>
+          <a href="https://www.linkedin.com/company/goost-immobilien/" target="_blank"><div class="fab fa-linkedin"></div></a>
         </div>
       `;
     }
 
     chatPopupContainer.insertBefore(popup, chatPopupContainer.firstChild);
 
-    const existingPopups = chatPopupContainer.querySelectorAll('.cb-chat-popup');
+    const existingPopups = chatPopupContainer.querySelectorAll('.chat-popup');
     existingPopups.forEach((existingPopup, index) => {
       if (index > 0) {
         existingPopup.style.transform = `translateY(-${index * 100}%)`;
@@ -338,7 +337,7 @@ export default function Component() {
       popup.classList.add('hide');
       setTimeout(() => {
         chatPopupContainer.removeChild(popup);
-        const remainingPopups = chatPopupContainer.querySelectorAll('.cb-chat-popup');
+        const remainingPopups = chatPopupContainer.querySelectorAll('.chat-popup');
         remainingPopups.forEach((remainingPopup, index) => {
           remainingPopup.style.transform = `translateY(-${index * 100}%)`;
         });
@@ -358,12 +357,12 @@ export default function Component() {
   }
 
   function initializeSearchButton() {
-    const searchButton = document.getElementById('cbSearchWidgetTrigger');
+    const searchButton = document.getElementById('searchWidgetTrigger');
     if (searchButton) {
       searchButton.addEventListener('click', function(event) {
         event.preventDefault();
         event.stopPropagation();
-        const searchWidget = document.querySelector('cb-gen-search-widget');
+        const searchWidget = document.querySelector('gen-search-widget');
         if (searchWidget) {
           searchWidget.setAttribute('open', '');
         }
@@ -371,35 +370,14 @@ export default function Component() {
     }
   }
 
-  function initializePhoneButton() {
-    const phoneButton = document.getElementById('cbPhoneButton');
-    if (phoneButton) {
-      phoneButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        window.location.href = 'tel:+123456789';
-      });
-    }
-  }
-
-  function initializeEmailButton() {
-    const emailButton = document.getElementById('cbEmailButton');
-    if (emailButton) {
-      emailButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        window.location.href = 'mailto:info@example.com';
-      });
-    
-    }
-  }
-
   function initializeChatPopupListeners() {
     chatPopupContainer.addEventListener('click', function(event) {
-      const popup = event.target.closest('.cb-chat-popup');
+      const popup = event.target.closest('.chat-popup');
       if (popup) {
-        if (event.target.closest('.cb-social-icons a')) {
+        if (event.target.closest('.social-icons a')) {
           return;
         }
-        const dfMessenger = document.querySelector('cb-df-messenger');
+        const dfMessenger = document.querySelector('df-messenger');
         if (dfMessenger) {
           dfMessenger.setAttribute('expand', 'true');
         }
@@ -410,8 +388,6 @@ export default function Component() {
   // Wait for DOM to be fully loaded
   document.addEventListener('DOMContentLoaded', function() {
     initializeSearchButton();
-    initializePhoneButton();
-    initializeEmailButton();
     initializeChatPopupListeners();
     showChatPopup('👋 Willkommen! Wie kann ich Ihnen helfen?', 5000);
   });
@@ -421,9 +397,9 @@ export default function Component() {
     initializeSearchButton();
     
     // Create and append the search widget
-    const searchWidget = document.createElement('cb-gen-search-widget');
-    searchWidget.setAttribute('configId', '');
-    searchWidget.setAttribute('triggerId', 'cbSearchWidgetTrigger');
+    const searchWidget = document.createElement('gen-search-widget');
+    searchWidget.setAttribute('configId',   '7059425d-0df0-429c-846a-86f698dc4fde');
+    searchWidget.setAttribute('triggerId', 'searchWidgetTrigger');
     document.body.appendChild(searchWidget);
   });
 
@@ -457,7 +433,7 @@ export default function Component() {
   buttonStackArea.addEventListener('mouseenter', expandButtons);
 
   document.addEventListener('mousemove', function(e) {
-    const chatbot = document.querySelector('cb-df-messenger');
+    const chatbot = document.querySelector('df-messenger');
     if (chatbot) {
       const chatbotRect = chatbot.getBoundingClientRect();
       const buttonStackRect = buttonStackArea.getBoundingClientRect();
@@ -503,6 +479,4 @@ export default function Component() {
   const genAppBuilderScript = document.createElement('script');
   genAppBuilderScript.src = 'https://cloud.google.com/ai/gen-app-builder/client?hl=en_US';
   document.body.appendChild(genAppBuilderScript);
-
-  return null;
-}
+})();

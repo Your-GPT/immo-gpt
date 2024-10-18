@@ -487,6 +487,19 @@ df-messenger:hover::part(chat-bubble) {
     buttonsCollapsed = false;
   }
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.cb-widget-button');
+    buttons.forEach(button => {
+      const svg = button.querySelector('svg');
+      if (svg) {
+        // Force a repaint of the SVG
+        svg.style.display = 'none';
+        svg.offsetHeight; // Trigger a reflow
+        svg.style.display = 'block';
+      }
+    });
+  });
+
   // Load external resources
 
   const dfMessengerStyleLink = document.createElement('link');

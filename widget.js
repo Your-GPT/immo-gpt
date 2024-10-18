@@ -218,23 +218,23 @@ df-messenger:hover::part(chat-bubble) {
       filter: brightness(1.5);
     }
 
-    .cb-recaptcha-badge {
+    .recaptcha-badge {
       visibility: hidden;
     }
 
-    .cb-recaptcha-text {
+    .recaptcha-text {
       font-size: 12px;
       color: #666;
       text-align: center;
       margin-top: 10px;
     }
 
-    .cb-recaptcha-text a {
+    .recaptcha-text a {
       color: var(--widget-button-color);
       text-decoration: none;
     }
 
-    .cb-recaptcha-text a:hover {
+    .recaptcha-text a:hover {
       text-decoration: underline;
     }
 
@@ -283,7 +283,7 @@ df-messenger:hover::part(chat-bubble) {
   document.body.appendChild(dfMessenger);
 
   const recaptchaText = document.createElement('div');
-  recaptchaText.className = 'cb-recaptcha-text';
+  recaptchaText.className = 'recaptcha-text';
   recaptchaText.innerHTML = `
     This site is protected by reCAPTCHA and the Google
     <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and

@@ -1,5 +1,4 @@
-(function() {
-  // Styles
+document.addEventListener('DOMContentLoaded', function() {  // Styles
   const styles = `
     @import url('https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css');
 

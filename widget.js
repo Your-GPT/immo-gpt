@@ -412,15 +412,12 @@ df-messenger:hover::part(chat-bubble) {
     });
   }
 
-initializeSearchButton();
-    initializeChatPopupListeners();
-  
   // Wait for DOM to be fully loaded
   document.addEventListener('DOMContentLoaded', function() {
-    
-  setTimeout(function() {
+    initializeSearchButton();
+    initializeChatPopupListeners();
     showChatPopup('👋 Willkommen! Wie kann ich Ihnen helfen?', 5000);
-  }, 1000);
+  });
 
   // Wait for the window to fully load
   window.addEventListener('load', function() {

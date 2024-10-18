@@ -416,7 +416,9 @@ df-messenger:hover::part(chat-bubble) {
   document.addEventListener('DOMContentLoaded', function() {
     initializeSearchButton();
     initializeChatPopupListeners();
+    setTimeout(function() {
     showChatPopup('👋 Willkommen! Wie kann ich Ihnen helfen?', 5000);
+  }, 1500);
   });
 
   // Wait for the window to fully load

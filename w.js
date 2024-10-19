@@ -352,6 +352,32 @@ document.addEventListener('DOMContentLoaded', function() {
   let pageLoadTime = Date.now();
   let firstTwoBubblesShown = false;
 
+    window.addEventListener('scroll', function() {
+  const windowHeight = window.innerHeight;
+  const bodyHeight = document.body.scrollHeight;
+  const scrollTop = window.pageYOffset;
+  const scrollPercentage = (scrollTop / (bodyHeight - windowHeight)) * 100;
+
+  // Add the following lines to initialize widgetButtons if it's not already initialized.
+  if (!widgetButtons) {
+    widgetButtons = document.getElementById('widgetButtons'); // Replace 'widgetButtons' with the actual ID of your button element.
+    if (!widgetButtons) {
+      console.error("widgetButtons element not found!");
+    }
+  }
+
+  if (scrollPercentage >= 90 && buttonsCollapsed) {
+    expandButtons();
+  } else if (scrollTop > lastScrollTop && !buttonsCollapsed && scrollPercentage < 90) {
+    collapseButtons();
+  } else if ((scrollTop < lastScrollTop || scrollPercentage >= 90) && buttonsCollapsed) {
+    expandButtons();
+  }
+
+  lastScrollTop = scrollTop; // Update lastScrollTop after each scroll event
+
+});
+
     function getCurrentPage() {
     const path = window.location.pathname;
     if (path === '/' || path === '/index.html') {
@@ -488,6 +514,22 @@ document.addEventListener('DOMContentLoaded', function() {
     showChatPopup(message, 5000);
   }, 1500);
 
+    function getSecondMessage() {
+  const currentPage = getCurrentPage();
+  switch(currentPage) {
+    case 'home':
+      return 'Möchten Sie mehr über unsere Dienstleistungen erfahren?';
+    case 'immobilien':
+      return 'Haben Sie eine bestimmte Art von Immobilie im Sinn?';
+    case 'kontakt':
+      return 'Haben Sie Fragen zu unseren Kontaktmöglichkeiten?';
+    case 'bewertung':
+      return 'Möchten Sie mehr über unseren Bewertungsprozess wissen?';
+    default:
+      return 'Kann ich Ihnen bei etwas Bestimmtem helfen?';
+  }
+}
+
   window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -502,8 +544,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 
-    if (maxScrollReached > 1300 && !shownPopups.has('🔎 Haben Sie gefunden was Sie suchen?')) {
-      showChatPopup('🔎 Haben Sie gefunden was Sie suchen?', 5000);
+    if (maxScrollReached > 1300 && !shownPopups.has('second')) {
+    showChatPopup(getSecondMessage(), 5000, false, 'second');
     }
 
     if (scrollPercentage > 90 && !shownPopups.has('Besuchen Sie uns gerne auf Social Media!')) {

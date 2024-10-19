@@ -525,6 +525,8 @@ document.addEventListener('DOMContentLoaded', function() {
       return 'Haben Sie Fragen zu unseren Kontaktmöglichkeiten?';
     case 'bewertung':
       return 'Möchten Sie mehr über unseren Bewertungsprozess wissen?';
+    case 'verkaufen':
+      return 'Wir bewerten Ihre Immobilie kostenlos für Sie.';
     default:
       return 'Kann ich Ihnen bei etwas Bestimmtem helfen?';
   }

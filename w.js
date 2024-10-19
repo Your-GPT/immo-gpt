@@ -518,9 +518,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const currentPage = getCurrentPage();
   switch(currentPage) {
     case 'home':
-      return 'Möchten Sie mehr über unsere Dienstleistungen erfahren?';
+      return '🔎 Haben Sie gefunden was Sie suchen?';
     case 'immobilien':
-      return 'Haben Sie eine bestimmte Art von Immobilie im Sinn?';
+      return '🔎 Haben Sie gefunden was Sie suchen?';
     case 'kontakt':
       return 'Haben Sie Fragen zu unseren Kontaktmöglichkeiten?';
     case 'bewertung':

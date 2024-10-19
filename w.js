@@ -382,13 +382,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const path = window.location.pathname;
     if (path === '/' || path === '/index.html') {
       return 'home';
-    } else if (path.includes('/aktuelle-immobilienangebote')) {
+    } else if (path.includes('aktuelle-immobilienangebote')) {
       return 'immobilien';
     } else if (path.includes('immobilienbewertung')) {
       return 'bewertung';
-    } else if (path.includes('/immobilien-verkaufen')) {
+    } else if (path.includes('immobilien-verkaufen')) {
       return 'verkaufen';
-    } else if (path.includes('/kontakt')) {
+    } else if (path.includes('kontakt')) {
       return 'kontakt';
     } 
     else {

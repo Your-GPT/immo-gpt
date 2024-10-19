@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return 'home';
     } else if (path.includes('/aktuelle-immobilienangebote')) {
       return 'immobilien';
-    } else if (path.includes('/immobilienbewertung')) {
+    } else if (path.includes('immobilienbewertung')) {
       return 'bewertung';
     } else if (path.includes('/immobilien-verkaufen')) {
       return 'verkaufen';

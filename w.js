@@ -352,6 +352,24 @@ document.addEventListener('DOMContentLoaded', function() {
   let pageLoadTime = Date.now();
   let firstTwoBubblesShown = false;
 
+    function getCurrentPage() {
+    const path = window.location.pathname;
+    if (path === '/' || path === '/index.html') {
+      return 'home';
+    } else if (path.includes('/aktuelle-immobilienangebote')) {
+      return 'immobilien';
+    } else if (path.includes('/immobilienbewertung')) {
+      return 'bewertung';
+    } else if (path.includes('/immobilien-verkaufen')) {
+      return 'verkaufen';
+    } else if (path.includes('/kontakt')) {
+      return 'kontakt';
+    } 
+    else {
+      return 'other';
+    }
+  }
+
   function showChatPopup(message, duration, socialIcons = false) {
     if (shownPopups.has(message)) return;
     shownPopups.add(message);
@@ -442,9 +460,32 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize components
   initializeChatPopupListeners();
 
-  // Show the first chat popup after a short delay
+    // Show the first chat popup after a short delay
   setTimeout(function() {
-    showChatPopup('👋 Willkommen! Wie kann ich Ihnen helfen?', 5000);
+    const currentPage = getCurrentPage();
+    let message = '';
+
+    switch(currentPage) {
+      case 'home':
+        message = '👋 Willkommen! Wie kann ich Ihnen helfen?';
+        break;
+      case 'immobilien':
+        message = '🏠 Suchen Sie eine bestimmte Immobilie?';
+        break;
+      case 'kontakt':
+        message = '📞 Möchten Sie direkt mit uns in Kontakt treten?';
+        break;
+      case 'bewertung':
+        message = '📊 Gerne bewerten wir Ihre Immobilie für Sie!';
+        break;
+      case 'verkaufen':
+        message = '🧾 Möchten Sie Ihre Immobilie bewerten lassen?';
+        break;
+      default:
+        message = 'Haben Sie Fragen? Ich bin hier, um zu helfen!';
+    }
+
+    showChatPopup(message, 5000);
   }, 1500);
 
   window.addEventListener('scroll', function() {

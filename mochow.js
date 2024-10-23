@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     @import url('https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css');
 
     :root {
-      --widget-button-color: ##3667AB;
+      --widget-button-color: #3669AC;
       --widget-icon-color: #f2f2f2;
       --widget-button-hover-color: #4a7fc4;
     }

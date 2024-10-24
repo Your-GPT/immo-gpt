@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Create and append the search widget
   script.onload = function() {
     searchWidget = document.createElement('gen-search-widget');
-    searchWidget.setAttribute('configId', '7059425d-0df0-429c-846a-86f698dc4fde');
+    searchWidget.setAttribute('configId', '502378bd-57f4-4248-aa10-26ef7de0b08e');
     searchWidget.setAttribute('triggerId', 'searchWidgetTrigger');
     document.body.appendChild(searchWidget);
     console.log('Search widget created and appended');

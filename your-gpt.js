@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
       position: fixed;
       bottom: 0;
       right: 0;
-      width: 300px;
-      height: 200px;
+      width: 260px;
+      height: 80px;
       z-index: 997;
     }
 

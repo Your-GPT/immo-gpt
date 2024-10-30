@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
       color: var(--widget-icon-color);
       border: none;
       border-radius: 50%;
-      width: 44px;
-      height: 44px;
+      width: 45px;
+      height: 45px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
       --df-messenger-user-message: #5a0f0f;
       --df-messenger-fab-color: var(--widget-button-color);
       --df-messenger-fab-icon-color: var(--widget-icon-color);
-      --df-messenger-chat-bubble-size: 44px;
+      --df-messenger-chat-bubble-size: 45px;
       --df-messenger-chat-bubble-background: var(--widget-button-color);
       --df-messenger-chat-bubble-icon-color: var(--widget-icon-color);
       --df-messenger-chat-bubble-border-radius: 50%;

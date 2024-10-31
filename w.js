@@ -9,24 +9,24 @@ document.addEventListener('DOMContentLoaded', function() {
       --widget-button-hover-color: #a00c0c;
     }
 
-    .cb-widget-buttons {
-      position: fixed;
-      bottom: 20px;
-      right: 78px;
-      display: flex;
-      flex-direction: row-reverse;
-      gap: 10px;
-      z-index: 998;
-      transition: transform 0.5s ease, opacity 0.5s ease;
-    }
+.cb-widget-buttons {
+  position: fixed;
+  bottom: 77px; /* Erhöht von 20px auf 88px um Platz über dem Chatbot zu schaffen */
+  right: 20px;  /* Angepasst auf 16px um mit dem Chatbot auszurichten */
+  display: flex;
+  flex-direction: column-reverse; /* Horizontale Ausrichtung der Buttons */
+  gap: 10px;
+  z-index: 998;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
 
     .cb-widget-button {
       background-color: var(--widget-button-color);
       color: var(--widget-icon-color);
       border: none;
       border-radius: 50%;
-      width: 48px;
-      height: 48px;
+      width: 45px;
+      height: 45px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     .cb-widget-buttons.collapsed {
-      transform: translateX(70px);
+      transform: translateY(70px);
       opacity: 0;
     }
 
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
       --df-messenger-user-message: #5a0f0f;
       --df-messenger-fab-color: var(--widget-button-color);
       --df-messenger-fab-icon-color: var(--widget-icon-color);
-      --df-messenger-chat-bubble-size: 48px;
+      --df-messenger-chat-bubble-size: 45px;
       --df-messenger-chat-bubble-background: var(--widget-button-color);
       --df-messenger-chat-bubble-icon-color: var(--widget-icon-color);
       --df-messenger-chat-bubble-border-radius: 50%;
@@ -137,8 +137,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     .cb-chat-popup-container {
       position: fixed;
-      bottom: 82px;
-      right: 20px;
+      bottom: 58px;
+      right: 72px;
       display: flex;
       flex-direction: column-reverse;
       align-items: flex-end;
@@ -151,8 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
       background-color: #f2f2f2;
       color: #333333;
       padding: 12px 20px;
-      border-radius: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+border-radius: 20px 20px 4px 20px;      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       z-index: 999;
       font-size: 13px;
       max-width: 400px;
@@ -255,6 +254,11 @@ document.addEventListener('DOMContentLoaded', function() {
       df-messenger {
         --df-messenger-chat-window-height: 75vh;
         --df-messenger-chat-window-width: calc(100vw - 40px);
+      }
+
+      .cb-widget-buttons {
+    gap: 6px;
+    bottom: 73px;
       }
     }
   `;

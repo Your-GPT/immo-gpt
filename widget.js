@@ -255,6 +255,11 @@ border-radius: 20px 20px 4px 20px;      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
         --df-messenger-chat-window-height: 75vh;
         --df-messenger-chat-window-width: calc(100vw - 40px);
       }
+
+      .cb-widget-buttons {
+    gap: 6px;
+    bottom: 73px;
+      }
     }
   `;
 

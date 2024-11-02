@@ -302,7 +302,7 @@ border-radius: 20px 20px 4px 20px;      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
   const dfMessenger = document.createElement('df-messenger');
   dfMessenger.setAttribute('intent', 'WELCOME');
   dfMessenger.setAttribute('chat-title', 'GoostGPT');
-  dfMessenger.setAttribute('agent-id', '0a296a3b-f2ab-49f9-b07d-aae7f98e6618');
+  dfMessenger.setAttribute('agent-id', '5e00c9cc-1a20-465d-912b-269525475a39');
   dfMessenger.setAttribute('language-code', 'de');
   document.body.appendChild(dfMessenger);
 

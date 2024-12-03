@@ -9,7 +9,7 @@
     }
     loadScript('https://cdn.botpress.cloud/webchat/v2.2/inject.js', () => {
         console.log('Botpress-Webchat geladen.');
-        loadScript('https://files.bpcontent.cloud/2024/11/28/11/20241128110207-4YHV7PQ4.js', () => {
+        loadScript('https://files.bpcontent.cloud/2024/11/28/12/20241128123057-A1XJ4QN3.js', () => {
             console.log('Custom-Skript geladen.');
             // Hier kannst du weitere Initialisierungen vornehmen
         });
